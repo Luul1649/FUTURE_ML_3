@@ -31,8 +31,11 @@ and identifies missing skills.
 # --------------------
 # Load Dataset
 # --------------------
+import pandas as pd
 
-df = pd.read_csv("Resume.csv")
+url = "YOUR_DIRECT_DOWNLOAD_LINK"
+df = pd.read_csv(https://drive.google.com/file/d/1XvIySI64QSH2CJom4Ob7-_X2C0eUzc56/view?usp=sharing)
+
 
 # Change this if your dataset uses another column name
 resume_column = "Resume_str"
