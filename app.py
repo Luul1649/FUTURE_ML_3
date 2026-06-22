@@ -31,11 +31,18 @@ and identifies missing skills.
 # --------------------
 # Load Dataset
 # --------------------
+import gdown
 import pandas as pd
+import os
 
-url = "YOUR_DIRECT_DOWNLOAD_LINK"
-df = pd.read_csv(https://drive.google.com/file/d/1XvIySI64QSH2CJom4Ob7-_X2C0eUzc56/view?usp=sharing)
+FILE_ID = "1XvIySI64QSH2CJom4Ob7-_X2C0eUzc56"
+DATA_FILE = "Resume.csv"
 
+if not os.path.exists(DATA_FILE):
+    url = f"https://drive.google.com/uc?id={FILE_ID}"
+    gdown.download(url, DATA_FILE, quiet=False)
+
+df = pd.read_csv(DATA_FILE)
 
 # Change this if your dataset uses another column name
 resume_column = "Resume_str"
